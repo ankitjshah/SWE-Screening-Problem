@@ -6,7 +6,7 @@ flatRecord = {}
 # Reading from file
 with open('sampleJson.json') as sampleJson:
   data = json.load(sampleJson)
-# print(data)
+
 
 with open('testSchema.json') as schemaJson:
   schema = json.load(schemaJson)

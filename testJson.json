@@ -30,7 +30,7 @@
     }
   },
   {
-    "title": "Test case for invalid default value",
+    "title": "Test case for the invalid default value",
     "input": {
       "App": {
         "Name": "Words with Friends",
@@ -59,7 +59,7 @@
     }
   },
   {
-    "title": "Test case for invalid type of key",
+    "title": "Test case for the invalid type of key",
     "input": {
       "App": {
         "Name": "Words with Friends",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "title": "Test case for actual json object",
+    "title": "Test case for the actual JSON object",
     "input": {
       "App": {
         "Name": "Words with Friends",

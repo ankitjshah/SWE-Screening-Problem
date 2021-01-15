@@ -1,0 +1,153 @@
+{"data":[
+  {
+    "title": "Test case for extra key",
+    "input": {
+      "App": {
+        "Name": "Words with Friends",
+        "BundleID": "com.zynga.words",
+        "Categories": [
+          1,
+          3,
+          15
+        ]
+      },
+      "Device": {
+        "OS": "Android",
+        "OSVersion": "Jellybean"
+      },
+      "DummyKey": "DummyValue"
+    },
+    "expectedOutput": {
+      "App.Name": "Words with Friends",
+      "App.BundleID": "com.zynga.words",
+      "App.Categories": [
+        1,
+        3,
+        15
+      ],
+      "Device.OS": "Android",
+      "Device.OSVersion": "Jellybean"
+    }
+  },
+  {
+    "title": "Test case for invalid default value",
+    "input": {
+      "App": {
+        "Name": "Words with Friends",
+        "BundleID": "com.zynga.words",
+        "Categories": [
+          1,
+          3,
+          15
+        ]
+      },
+      "Device": {
+        "OS": "DummyOS",
+        "OSVersion": "Jellybean"
+      }
+    },
+    "expectedOutput": {
+      "App.Name": "Words with Friends",
+      "App.BundleID": "com.zynga.words",
+      "App.Categories": [
+        1,
+        3,
+        15
+      ],
+      "Device.OS": null,
+      "Device.OSVersion": "Jellybean"
+    }
+  },
+  {
+    "title": "Test case for invalid type of key",
+    "input": {
+      "App": {
+        "Name": "Words with Friends",
+        "BundleID": "com.zynga.words",
+        "Categories": [
+          1,
+          3,
+          15
+        ]
+      },
+      "Device": {
+        "OS": "Android",
+        "OSVersion": 1
+      }
+    },
+    "expectedOutput": {
+      "App.Name": "Words with Friends",
+      "App.BundleID": "com.zynga.words",
+      "App.Categories": [
+        1,
+        3,
+        15
+      ],
+      "Device.OS": "Android",
+      "Device.OSVersion": null
+    }
+  },
+  {
+    "title": "Test case for actual json object",
+    "input": {
+      "App": {
+        "Name": "Words with Friends",
+        "BundleID": "com.zynga.words",
+        "Categories": [
+          1,
+          3,
+          15
+        ]
+      },
+      "Device": {
+        "OS": "Android",
+        "OSVersion": "Jellybean"
+      },
+      "AdSlots": [
+        {
+          "Type": "Banner",
+          "Size": "320x50",
+          "Position": "0",
+          "PrivateDeal": {
+            "PriceCPM": 2.2,
+            "AuctionType": 1,
+            "ID": "abc"
+          }
+        },
+        {
+          "Type": "Video",
+          "Size": "320x50",
+          "Position": "1",
+          "Duration": 15
+        }
+      ]
+    },
+    "expectedOutput": {
+      "App.Name": "Words with Friends",
+      "App.BundleID": "com.zynga.words",
+      "App.Categories": [
+        1,
+        3,
+        15
+      ],
+      "Device.OS": "Android",
+      "Device.OSVersion": "Jellybean",
+      "AdSlots": [
+        {
+          "Type": "Banner",
+          "Size": "320x50",
+          "Position": "0",
+          "PrivateDeal.PriceCPM": 2.2,
+          "PrivateDeal.AuctionType": 1,
+          "PrivateDeal.ID": "abc"
+        },
+        {
+          "Type": "Video",
+          "Size": "320x50",
+          "Position": "1",
+          "Duration": 15
+        }
+      ]
+    }
+  }
+]}

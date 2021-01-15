@@ -15,10 +15,17 @@ def validateJsonSchema(record, typeArr):
             else:
                 if type(typeArr[key]['typeVal']) == type(record[key]):
                     if 'defaultValues' in typeArr[key]:
-                        if record[key] in typeArr[key]['defaultValues']:
-                            continue
+                        if type(record[key]) == list:
+                          for a in record[key]:
+                            if a in typeArr[key]['defaultValues']:
+                                continue
+                            else:
+                                record[key] = None
                         else:
-                            record[key] = None
+                            if record[key] in typeArr[key]['defaultValues']:
+                                continue
+                            else:
+                                record[key] = None
                     if 'format' in typeArr[key]:
                         # match variable contains a Match object.
                         match = validateSizeFormat(record[key])

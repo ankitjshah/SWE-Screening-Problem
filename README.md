@@ -1,7 +1,6 @@
 # Pelmorex Corp - SWE Screening Problem
 
 The JSON request object has been verified against the available schema.
-You can find the source code at [Github](https://github.com/ankitjshah/SWE-Screening-Problem.git).
 
 ## Prerequisite
 
